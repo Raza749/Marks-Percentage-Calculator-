@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans",sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --backgroundColor:#be95c4;
+    --textColor:#8f65c7;
+    --darkColor:#5e548e;
+    --boxColor:#e0b1cb;
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--backgroundColor);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container h1{
+    font-size: 50px;
+    color: var(--darkColor);
+    margin: 10px 0;
+}
+
+.container .error{
+    font-size: 22px;
+    color: crimson;
+    font-weight: 500;
+    opacity: 0;
+    transition: .5s ease;
+    margin: 0;
+}
+
+.container .center{
+    width: 95%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    transition: .5s ease-in;
+}
+
+.container .center .box{
+    width: 38%;
+    height: 85%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.344);
+    padding: 15px;
+}
+
+.container .center .userInput{
+    background-color: var(--boxColor);
+   }
+
+.container .center .userInput form .field{
+    max-width: 90%;
+    height: 60px;
+    margin: 30px auto;
+    position: relative;
+    border: 2px solid var(--darkColor);
+    border-radius: 4px;
+}
+
+.container .center .userInput form .field .input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 8px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-text-fill-color: #000; /* Set text color as needed */
+  --webkit-background-color:transparent;
+}
+
+.container .center .userInput form .field label{
+    position: absolute;
+    top:20%;
+    padding: 0 8px;
+    margin-left: 5px;
+    color: var(--darkColor);
+    font-size: 21px;
+    transition: .3s ease;
+    font-weight: 600;
+    z-index: 2;
+    transform: translateY(-27px);
+    background-color: var(--boxColor);
+}
+
+
+.container .center .userInput form button{
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--darkColor);
+    border: none;
+    outline: none;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+
+.container .center .userInput form button:hover{
+    transform: translateY(5px);
+    opacity: .7;
+}
+
+
+.container .center .result{
+    background-color: var(--darkColor);
+    transition: .5s ease;
+   display: none;
+} 
+
+.container .center .result h3{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.container .center .result .userNameText{
+    font-size: 25px;
+    color: var(--boxColor);
+    margin: 15px 0;
+    text-align: center;
+    font-family: "Poppins","Open-sans",sans-serif;
+    font-weight: 500;
+}
+
+.container .center .result .res{
+    color: var(--boxColor);
+    text-align: center;
+}
+
+.container .center .result p{
+    font-size: 20px;
+    margin: 15px 0;
+    text-align: center;
+    color: var(--boxColor);
+}
+
+.container .center .result button{
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--darkColor);
+    background-color: var(--boxColor);
+    border: none;
+    outline: none;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.container .center .result button:hover{
+    transform: translateY(5px);
+    opacity: .7;
+}
+
+
+/* Footer Styling start here */
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: var(--darkColor);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer p{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer p a{
+    color: rgb(56, 127, 249);
+    font-size: 22px;
+}
+
+/* Footer styling end here */
+
+/* Making Responsive for Mobile devices */
+@media(max-width:768px){
+    .container h1{
+       font-size: 25px;
+    }
+
+    .container .center{
+        flex-direction: column;
+    }
+
+    .container .center .box{
+        width: 95%;
+        height: 50%;
+    }
+
+    
+.container .center .userInput {
+    padding: 2%;
+    height: 47%;
+}
+    
+.container .center .userInput form .field{
+    max-width: 90%;
+    height: 32px;
+    margin: 20px auto;
+    position: relative;
+    border: 2px solid var(--darkColor);
+    border-radius: 4px;
+}
+
+
+.container .center .userInput form .field .input{
+    font-size: 16px;
+}
+
+
+.container .center .userInput form button{
+    font-size: 15px;
+    margin: 3px 0;
+    cursor: pointer;
+}
+
+.container .center .result{
+    height: 43%;
+    padding: 10px;
+}
+
+
+.container .center .result h3{
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.container .center .result .userNameText{
+    font-size: 17px;
+    margin: 3px 0;
+}
+
+.container .center .result .res{
+    font-size: 15px;
+}
+
+.container .center .result p{
+    font-size: 15px;
+    margin: 3px 0;
+}   
+
+.container .center .result button{
+    font-size: 15px;
+    margin: 3px 0;
+}
+
+.container .error{
+    font-size: 14px;
+    margin:0;
+}
+
+
+footer{
+    height:70px;
+    background-color: var(--darkColor);
+}
+
+footer p{
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px 0 0 0;
+}
+
+footer p a{
+    font-size: 15px;
+}
+
+}
